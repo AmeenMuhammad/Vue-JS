@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Code</title>
+</head>
+<body>
+    
+    <script> 
+        function getMyChildrens(childs) {
+    if(childs.length > 0) {
+        childs.forEach(
+            (c) => {
+                console.log(c)
+            }
+            );
+    } else {
+        console.log("No bacha available");
+    }
+}
+
+function getMyEducation(eDetails) {
+    if(eDetails.length > 0) {
+    eDetails.forEach(
+        (e) => {
+            console.log(e.name, e.type, e.grade);
+        }
+        );
+    } else {
+        console.log("No educational details");
+    }
+}
+const obj = [
+    {
+    name: "Ali",
+    age: 23,
+    childrens: ["a", "b", "c"],
+    educationalDetails: [
+        {
+            name: "abc school",
+            type: "primary",
+            grade: "A-"
+        },
+        {
+            name: "abc college",
+            type: "secondary",
+            grade: "A-"
+        },
+        ]
+    },
+    {
+    name: "Hasnain",
+    age: 52,
+    childrens: ["a", "d"],
+    educationalDetails: [
+        {
+            name: "abc school",
+            type: "primary",
+            grade: "A-"
+        },
+        {
+            name: "abc college",
+            type: "secondary",
+            grade: "A-"
+        },
+        {
+            name: "abc uni",
+            type: "bachelors",
+            grade: "A-"
+        },
+        ]
+    },
+     {
+    name: "Taha",
+    age: 52,
+    childrens: [],
+    educationalDetails: [
+        ]
+    },
+    ]
+
+obj.forEach(
+     (o) => {
+         console.log(o.name, o.age);
+         getMyChildrens(o.childrens);
+         getMyEducation(o.educationalDetails);
+     }
+    );
+
+//===================================================
+
+    </script>
+</body>
+</html>
